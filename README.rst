@@ -25,11 +25,10 @@ Molecule
    :target: LICENSE
    :alt: Repository License
 
-Molecule is designed to aid in the development and testing of `Ansible`_ roles.
+Molecule helps you develop and test `Ansible`_ roles.
 Molecule provides support for testing with multiple instances, operating
 systems and distributions, virtualization providers, test frameworks and
-testing scenarios.  Molecule is opinionated in order to encourage an approach
-that results in consistently developed roles that are well-written, easily
+testing scenarios.  Molecule's opinionated approach results in consistent, well-written roles that are easily
 understood and maintained.
 
 Molecule uses `Ansible`_ `playbooks`_ to exercise the `role`_ and its
