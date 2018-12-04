@@ -1,25 +1,29 @@
 .. _installation:
 
-************
-Installation
-************
+***********************************************
+Installing Molecule and a Virtualization Driver
+***********************************************
 
-This document assumes the developer has a basic understanding of python
-packaging, and how to install and manage python on the system executing
-Molecule.
+Molecule is a Python package that's distributed via PyPI. You can install it via ``pip`` or from the source repository. If you want the stable version of Molecule, install with ``pip``. If you want to contribute to the Molecule project, and/or use cutting-edge features, install from source.
 
-Requirements
-============
+To run Molecule, you also need to install a connection to a virtualization platform, called a driver. The default driver is Docker, but Molecule can also run on Vagrant and on most of the major cloud providers.
 
-Depending on the driver chosen, you may need to install additional OS packages.
-See ``INSTALL.rst``, which is created when initializing a new scenario.
+Installing Molecule with ``pip``
+================================
+
+The quickest way to install Molecule is with the Python package manager, ``pip``.
+
+Prerequisites
+-------------
+
+Before you can install Molecule with ``pip``, you must have Python installed. Depending on the system you are running, you may need additional packages.
 
 * :std:doc:`Ansible <ansible:index>` >= 2.4
 * Python 2.7
 * Python >= 3.6 with Ansible >= 2.4
 
 CentOS 7
---------
+^^^^^^^^
 
 .. code-block:: bash
 
@@ -27,24 +31,25 @@ CentOS 7
     $ sudo yum install -y gcc python-pip python-devel openssl-devel libselinux-python
 
 Ubuntu 16.x
------------
+^^^^^^^^^^^
 
 .. code-block:: bash
 
     $ sudo apt-get update
     $ sudo apt-get install -y python-pip libssl-dev
 
-Pip
-===
+Install with ``pip``
+--------------------
+
+``pip install molecule``
 
 :std:doc:`pip <pip:usage>` is the only supported installation method.
 
-Requirements
-------------
+On some versions of macOS, you may see an error message ``could not create '/System/Library/Frameworks/Python.framework/Versions/2.7/share': Operation not permitted`` when you do ``pip install molecule``. If you run into this, install Molecule at the user level instead of system-wide:
 
-Depending on the driver chosen, you may need to install additional python
-packages.  See the driver's documentation or `INSTALL.rst`, which is created
-when initializing a new scenario.
+``pip install molecule --user``
+
+Then make sure ``~/Library/Python/2.7/bin/`` is on your $PATH.
 
 Install
 -------
@@ -64,15 +69,15 @@ some benefits:
 * allows molecule installation at user level without even needing to have
   the script in ``PATH``.
 
-Source
-======
+Installing Molecule from source
+===============================
 
 Due to the rapid pace of development on this tool, you might want to install it
 in "`development mode`_" so that new updates can be obtained by simply doing a
 ``git pull`` in the repository's directory.
 
-Requirements
-------------
+Prerequisites
+-------------
 
 CentOS 7
 ^^^^^^^^
@@ -88,11 +93,12 @@ Ubuntu 16.x
 
     $ sudo apt-get install -y libffi-dev git
 
-Install
--------
+Install from source
+-------------------
 
 .. code-block:: bash
 
+    $ git clone
     $ cd /path/to/molecule/checkout
     $ pip install -U -e .
 
