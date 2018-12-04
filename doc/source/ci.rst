@@ -1,12 +1,10 @@
 Continuous integration
 ----------------------
 
-Travis CI
-^^^^^^^^^
+Running molecule tests on Travis CI
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Travis`_ is a CI platform, which can be used to test Ansible roles.
-
-A ``.travis.yml`` testing a role named foo1 with the Docker driver.
+You can test your Ansible roles on the `Travis`_ CI platform. Here's an example configuration file (``.travis.yml``) that tests a role named ``foo1`` with the Docker driver.
 
 .. code-block:: yaml
 
@@ -23,7 +21,7 @@ A ``.travis.yml`` testing a role named foo1 with the Docker driver.
     script:
       - molecule test
 
-A ``.travis.yml`` using `Tox`_ as described below.
+Here's a ``.travis.yml`` file using `Tox`_ as described below.
 
 .. code-block:: yaml
 
@@ -39,10 +37,10 @@ A ``.travis.yml`` using `Tox`_ as described below.
     script:
       - tox
 
-Gitlab CI
-^^^^^^^^^
+Running molecule tests on Gitlab CI
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Gitlab`_ includes its own CI. Pipelines are usually defined in a ``.gitlab-ci.yml`` file in the top folder of a repository, to be ran on Gitlab Runners. 
+`Gitlab`_ includes its own CI. Pipelines are usually defined in a ``.gitlab-ci.yml`` file in the top folder of a repository, to be ran on Gitlab Runners.
 
 Here is an example setting up a virtualenv and testing an Ansible role via Molecule. User-level pip is cached and so is the virtual environment to save time. And this is run over a runner tagged `pip36` and `docker`, because its a minimal CentOS 7 VM installed with pip36 from IUS repository and docker.
 
@@ -79,8 +77,8 @@ Here is an example setting up a virtualenv and testing an Ansible role via Molec
         - molecule --version
         - molecule test
 
-Jenkins Pipeline
-^^^^^^^^^^^^^^^^
+Running molecule tests as a Jenkins Pipeline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Jenkins`_ projects can also be defined in a file, by default named `Jenkinsfile` in the top folder of a repository. Two syntax are available, Declarative and Scripted. Here is an example using the declarative syntax, setting up a virtualenv and testing an Ansible role via Molecule.
 
@@ -146,8 +144,8 @@ Jenkins Pipeline
 
 
 
-Tox
-^^^
+Running molecule tests using Tox
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Tox`_ is a generic virtualenv management, and test command line tool.  `Tox`_
 can be used in conjunction with `Factors`_ and Molecule, to perform scenario
@@ -181,8 +179,8 @@ To view the factor generated tox environments.
     py27-ansible21
     py27-ansible22
 
-Detox
-^^^^^
+Running molecule tests on Detox
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 `Detox`_ is a distributed version of Tox which can be used to make efficient
 use of multiple CPUs. Detox will run tox environment tests in parallel.
