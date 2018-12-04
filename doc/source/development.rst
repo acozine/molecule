@@ -1,6 +1,6 @@
-***********
-Development
-***********
+************************
+Contributing to Molecule
+************************
 
 * Please read the :ref:`contributing` guidelines.
 
