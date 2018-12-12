@@ -66,15 +66,10 @@ author = u'AUTHORS.rst'
 github_url = 'https://github.com'
 github_repo_org = 'ansible'
 github_repo_name = 'molecule'
-github_repo_slug = f'{github_repo_org}/{github_repo_name}'
-github_repo_url = f'{github_url}/{github_repo_slug}'
-
-extlinks = {
-    'issue': (f'{github_repo_url}/issues/%s', '#'),
-    'pr': (f'{github_repo_url}/pull/%s', 'PR #'),
-    'commit': (f'{github_repo_url}/commit/%s', ''),
-    'gh': (f'{github_url}/%s', 'GitHub: '),
-}
+github_repo_slug = 'ansible/molecule'
+github_repo_url = 'https://github.com/ansible/molecule'
+# github_repo_slug = f'{github_repo_org}/{github_repo_name}'
+# github_repo_url = f'{github_url}/{github_repo_slug}'
 
 intersphinx_mapping = {
     'ansible': ('https://docs.ansible.com/ansible/devel/', None),
