@@ -9,7 +9,7 @@ Molecule automates testing Ansible roles by leveraging Ansible to:
 
 For each Molecule test scenario you must choose:
 * a virtualization platform or `driver` (Docker, Vagrant, a cloud platform, etc.)
-* a test framework or 'verifier' (Goss, Inspec, Testinfra)
+* a test engine or 'verifier' (Ansible itself, Testinfra, Goss, Inspec)
 
 Creating your first Molecule project
 ====================================
